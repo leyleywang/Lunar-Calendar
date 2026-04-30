@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>农历日历</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">农历日历</h1>
+            <div class="date-selector">
+                <input type="date" id="date-input" class="date-input">
+                <button id="search-btn" class="btn btn-search">查询</button>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="date-display">
+                <div class="solar-info">
+                    <div class="solar-date" id="solar-date">2026年4月30日</div>
+                    <div class="weekday" id="weekday">星期四</div>
+                </div>
+                
+                <div class="lunar-info">
+                    <div class="lunar-date" id="lunar-date">三月十四</div>
+                    <div class="lunar-year" id="lunar-year">2026年 丙午年</div>
+                </div>
+
+                <div class="zodiac-info">
+                    <div class="zodiac-item">
+                        <span class="zodiac-label">生肖</span>
+                        <span class="zodiac-value" id="zodiac">马</span>
+                    </div>
+                    <div class="zodiac-item">
+                        <span class="zodiac-label">星座</span>
+                        <span class="zodiac-value" id="constellation">金牛座</span>
+                    </div>
+                    <div class="zodiac-item" id="solar-term-container" style="display: none;">
+                        <span class="zodiac-label">节气</span>
+                        <span class="zodiac-value" id="solar-term"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="almanac-section">
+                <div class="yi-section">
+                    <div class="section-title title-yi">宜</div>
+                    <div class="tag-list" id="yi-list">
+                        <span class="tag tag-yi">嫁娶</span>
+                        <span class="tag tag-yi">祭祀</span>
+                        <span class="tag tag-yi">祈福</span>
+                    </div>
+                </div>
+
+                <div class="ji-section">
+                    <div class="section-title title-ji">忌</div>
+                    <div class="tag-list" id="ji-list">
+                        <span class="tag tag-ji">入宅</span>
+                        <span class="tag tag-ji">安葬</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-section">
+                <div class="detail-item">
+                    <span class="detail-label">冲煞</span>
+                    <span class="detail-value" id="chong">冲鼠(壬子)煞北</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">胎神方位</span>
+                    <span class="detail-value" id="tai-shen">房床厕外东北</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">五行</span>
+                    <span class="detail-value" id="wu-xing">天河水</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">彭祖百忌</span>
+                    <span class="detail-value" id="peng-zu">甲不开仓财物耗散</span>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <button id="prev-btn" class="btn btn-nav">
+                    <span class="arrow">◀</span>
+                    <span class="nav-text">上一天</span>
+                </button>
+                <button id="today-btn" class="btn btn-today">今天</button>
+                <button id="next-btn" class="btn btn-nav">
+                    <span class="nav-text">下一天</span>
+                    <span class="arrow">▶</span>
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/lunar.js"></script>
+    <script src="js/almanac.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
